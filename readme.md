@@ -1,4 +1,6 @@
 # Falsy Finder (Work in progress)
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/montumodi/falsy-finder.svg)](https://greenkeeper.io/)
 A simple utility to find out falsy values from an object or arrays. It return all the keys along with values in an array. By default it will look for following falsy values:
 
 ```
