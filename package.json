@@ -1,0 +1,11 @@
+{
+  "name": "falsy-finder",
+  "version": "1.0.0",
+  "description": "This little utility helps in finding null, undefined etc values from objects and arrays.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashish Modi",
+  "license": "ISC"
+}

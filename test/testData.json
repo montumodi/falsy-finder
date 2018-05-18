@@ -1,0 +1,30 @@
+{
+  "data": [{
+    "type": "",
+    "company": null,
+    "someArray": [
+      {
+        "type1": null,
+        "type2": ""
+      },
+      {
+        "type3": "hei",
+        "type4": null
+      }
+    ]
+  },
+  {
+    "type": "",
+    "company": null,
+    "someArray": [
+      {
+        "type1": null,
+        "type2": ""
+      },
+      {
+        "type3": "hei",
+        "type4": null
+      }
+    ]
+  }]
+}
