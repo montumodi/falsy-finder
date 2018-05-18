@@ -1,30 +1,16 @@
 {
-  "data": [{
-    "type": "",
-    "company": null,
-    "someArray": [
-      {
-        "type1": null,
-        "type2": ""
-      },
-      {
-        "type3": "hei",
-        "type4": null
-      }
+  "data": {
+    "firstName": "",
+    "lastName": "Ashish",
+    "address": {
+      "City": null,
+      "Street": "London"
+    },
+    "tags": [
+      "Hi",
+      "hello",
+      "",
+      null
     ]
-  },
-  {
-    "type": "",
-    "company": null,
-    "someArray": [
-      {
-        "type1": null,
-        "type2": ""
-      },
-      {
-        "type3": "hei",
-        "type4": null
-      }
-    ]
-  }]
+  }
 }

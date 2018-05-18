@@ -9,10 +9,23 @@ const defaultFalsyValuesToCheck = [
 ];
 
 const falsies = [];
-function handleArray(arr) {
+function handleArray(key, arr) {
   arr.forEach(element => {
-    isArray(element) ? handleArray(element): handleObject(element);
+    if (isArray(element)) {
+      return handleArray(key, element)
+    }
+
+    if (isObject(element)) {
+      return handleObject(element)
+    }
+    return handleSingleValue(key, element)
   });
+}
+
+function handleSingleValue(key, val) {
+  if(defaultFalsyValuesToCheck.includes(val)) {
+    falsies.push({"key": key, "value": val});
+  }
 }
 
 function handleObject(obj) {
@@ -21,10 +34,10 @@ function handleObject(obj) {
       falsies.push({"key": key, "value": obj[key]});
     }
     if (isObject(obj[key])) {
-      handleObject(obj[key]);
+      return handleObject(obj[key]);
     }
     if(isArray(obj[key])) {
-      handleArray(obj[key]);
+      return handleArray(key, obj[key]);
     }
   });
 }
