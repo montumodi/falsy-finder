@@ -7,5 +7,23 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ashish Modi",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montumodi/falsy-finder.git"
+  },
+  "keywords": [
+    "falsy",
+    "null",
+    "undefined",
+    "json",
+    "finder"
+  ],
+  "bugs": {
+    "url": "https://github.com/montumodi/falsy-finder/issues"
+  },
+  "homepage": "https://github.com/montumodi/falsy-finder#readme"
 }
