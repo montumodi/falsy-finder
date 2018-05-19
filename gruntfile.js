@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 
     "shell": {
       "lab": {
-        "command": "./node_modules/.bin/lab --verbose --colors -S -r console -r html -o stdout -o coverage.html --threshold 97",
+        "command": "./node_modules/.bin/lab --verbose --colors -S -r console -r html -o stdout -o coverage.html --threshold 100",
         "options": {
           "execOptions": {
             "maxBuffer": Infinity
@@ -81,7 +81,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask("test", [
-    "env:test",
     "shell:lab"
   ]);
 };

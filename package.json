@@ -4,7 +4,15 @@
   "description": "This little utility helps in finding null, undefined etc values from objects and arrays.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/lab/bin/lab ./test/ -v -S --assert code",
+    "lint": "./node_modules/.bin/eslint ./src --fix",
+    "travis": "npm run test",
+    "premajor": "npm run test",
+    "major": "npm version major -m \"published to npm as v%s\" && git push --follow-tags && npm publish",
+    "preminor": "npm run test",
+    "minor": "npm version minor -m \"published to npm as v%s\" && git push --follow-tags && npm publish",
+    "prepatch": "npm run test",
+    "patch": "npm version patch -m \"published to npm as v%s\" && git push --follow-tags && npm publish"
   },
   "author": "Ashish Modi",
   "license": "ISC",
