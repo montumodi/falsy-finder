@@ -25,5 +25,18 @@
   "bugs": {
     "url": "https://github.com/montumodi/falsy-finder/issues"
   },
-  "homepage": "https://github.com/montumodi/falsy-finder#readme"
+  "homepage": "https://github.com/montumodi/falsy-finder#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.0.0",
+    "grunt-jsinspect": "^3.0.0",
+    "grunt-newer": "^1.3.0",
+    "grunt-shell": "^2.1.0",
+    "lab": "^14.1.1",
+    "load-grunt-tasks": "^3.5.0",
+    "time-grunt": "^1.3.0"
+  }
 }
