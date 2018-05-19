@@ -1,6 +1,6 @@
 {
   "name": "falsy-finder",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This little utility helps in finding null, undefined etc values from objects and arrays.",
   "main": "src/index.js",
   "scripts": {
