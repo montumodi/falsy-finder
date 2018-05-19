@@ -54,16 +54,16 @@ experiment("Falsy finder with default options", () => {
         done();
       });
     });
-  });
-  experiment("When string is provided as input", () => {
-    it("should throw error", done => {
-      try {
-        getFalsyValues("string");
-        fail("should have thrown an error");
-      } catch (error) {
-        expect(error.message).to.equal("input is not a valid object");
-      }
-      done();
+    experiment("When string is provided as input", () => {
+      it("should throw error", done => {
+        try {
+          getFalsyValues("string");
+          fail("should have thrown an error");
+        } catch (error) {
+          expect(error.message).to.equal("input is not a valid object");
+        }
+        done();
+      });
     });
   });
 });
