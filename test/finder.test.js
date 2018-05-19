@@ -61,7 +61,7 @@ experiment("Falsy finder with default options", () => {
         getFalsyValues("string");
         fail("should have thrown an error");
       } catch (error) {
-        expect(error).to.equal(new Error("input is not a valid object"));
+        expect(error.message).to.equal("input is not a valid object");
       }
       done();
     });
