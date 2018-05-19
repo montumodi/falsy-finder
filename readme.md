@@ -23,7 +23,7 @@ npm install falsy-finder -S
 The basic syntax is:
 
 ```js
-const finder = require("falsy-finder");
+const finder = require("falsy-finder")();
 
 const someJsonWithNullValues = {
   "data": {
