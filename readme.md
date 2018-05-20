@@ -13,8 +13,7 @@ A simple utility to find out falsy values from an object or arrays. It return al
 null,
 undefined,
 NaN,
-Infinity,
-''
+Infinity
 ```
 
 ## How to install
@@ -71,4 +70,4 @@ const result = finder.getFalsyValues(someJsonWithNullValues);
 
 The `getFinder` method supports following options
 
-* `falsyValues`: (array) The custom falsy values array to check against. - default: `["", null, undefined, NaN, Infinity, ""]`
+* `falsyValues`: (array) The custom falsy values array to check against. - default: `["", null, undefined, NaN, Infinity]`
