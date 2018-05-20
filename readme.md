@@ -3,6 +3,8 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/montumodi/falsy-finder.svg)](https://greenkeeper.io/)
 [![Coverage Status](https://coveralls.io/repos/github/montumodi/falsy-finder/badge.svg?branch=master)](https://coveralls.io/github/montumodi/falsy-finder?branch=master)
 [![Build Status](https://travis-ci.org/montumodi/falsy-finder.svg?branch=master)](https://travis-ci.org/montumodi/falsy-finder)
+[![Deps](https://david-dm.org/montumodi/falsy-finder.svg)](https://david-dm.org/montumodi/falsy-finder#info=dependencies)
+[![devDependency Status](https://david-dm.org/montumodi/falsy-finder/dev-status.svg)](https://david-dm.org/montumodi/falsy-finder#info=devDependencies)
 
 [![NPM](https://nodei.co/npm/falsy-finder.png?downloads=true)](https://www.npmjs.com/package/falsy-finder/)
 
