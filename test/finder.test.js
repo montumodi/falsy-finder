@@ -68,3 +68,43 @@ experiment("Falsy finder with default options", () => {
   });
 });
 
+experiment("Falsy finder with custom options", () => {
+  const {getFalsyValues} = finder({"falsyValues": ["custom", "options"]});
+  const objectInput = {
+    "data": {
+      "value": "custom"
+    }
+  };
+  const arrayInput = [
+    {
+      "data": "options"
+    }
+  ];
+  experiment("getFalsyValues Method", () => {
+    experiment("When object (no array) is provided as input", () => {
+      it("should return array of keys successfully", done => {
+        const result = getFalsyValues(objectInput);
+        expect(result).to.equal([{"key": "value", "value": "custom"}]);
+        done();
+      });
+    });
+    experiment("When array is provided as input", () => {
+      it("should return array of keys successfully", done => {
+        const result = getFalsyValues(arrayInput);
+        expect(result).to.equal([{"key": "data", "value": "options"}]);
+        done();
+      });
+    });
+    experiment("When string is provided as input", () => {
+      it("should throw error", done => {
+        try {
+          getFalsyValues("custom string");
+          fail("should have thrown an error");
+        } catch (error) {
+          expect(error.message).to.equal("input is not a valid object");
+        }
+        done();
+      });
+    });
+  });
+});

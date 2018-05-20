@@ -1,8 +1,9 @@
 const assert = require("assert");
+const getOptions = require("./optionsProvider");
 
-/* eslint-disable no-undefined */
+function getFinder(options) {
 
-function getFinder(falsyValuesToCheck = ["", null, undefined, NaN, Infinity, ""]) {
+  const validatedOptions = getOptions(options);
 
   const falsies = [];
 
@@ -23,14 +24,14 @@ function getFinder(falsyValuesToCheck = ["", null, undefined, NaN, Infinity, ""]
   }
 
   function handleSingleValue(key, value) {
-    if (falsyValuesToCheck.includes(value)) {
+    if (validatedOptions.falsyValues.includes(value)) {
       falsies.push({key, value});
     }
   }
 
   function handleObject(obj) {
     Object.keys(obj).forEach(key => {
-      if (falsyValuesToCheck.includes(obj[key])) {
+      if (validatedOptions.falsyValues.includes(obj[key])) {
         falsies.push({key, "value": obj[key]});
       }
       if (isObject(obj[key])) {
@@ -76,4 +77,3 @@ function getFinder(falsyValuesToCheck = ["", null, undefined, NaN, Infinity, ""]
 
 module.exports = getFinder;
 
-/* eslint-enable no-undefined */
