@@ -89,4 +89,4 @@ const finder = createFinder(options);
 
 The `getFinder` method supports following options
 
-* `falsyValues`: (array) The custom falsy values array to check against. - default: `["", null, undefined, NaN, Infinity]`
+* `falsyValues`: (array) The custom falsy values array to check against. - default: `["", null, undefined, NaN]`

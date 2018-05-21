@@ -7,7 +7,7 @@ experiment("Falsy finder schema validator", () => {
   experiment("When no options are provided", () => {
     it("should generate options object with default values", done => {
       const options = getOptions();
-      expect(options).to.equal({"falsyValues": ["", null, undefined, NaN, Infinity]});
+      expect(options).to.equal({"falsyValues": ["", null, undefined, NaN]});
       done();
     });
   });

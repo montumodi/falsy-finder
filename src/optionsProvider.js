@@ -1,7 +1,7 @@
 const Joi = require("joi");
 
 const finderOptionsSchema = Joi.object({
-  "falsyValues": Joi.array().optional().default(["", null, undefined, NaN, Infinity])
+  "falsyValues": Joi.array().optional().default(["", null, undefined, NaN])
 });
 
 function getOptions(options = {}) {
