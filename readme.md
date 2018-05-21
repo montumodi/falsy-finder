@@ -8,7 +8,7 @@
 
 [![NPM](https://nodei.co/npm/falsy-finder.png?downloads=true)](https://www.npmjs.com/package/falsy-finder/)
 
-A simple utility to find out falsy values from an object or arrays. It return all the keys along with values in an array. By default it will look for following falsy values:
+A simple utility to find out falsy values from an object or arrays. It returns all the keys along with values in an array. By default it will look for following falsy values:
 
 ```
 "",
@@ -17,6 +17,8 @@ undefined,
 NaN,
 Infinity
 ```
+
+This behavior cane be customized by passing options while creating finder. See [options](#options)
 
 ## How to install
 
@@ -29,7 +31,9 @@ npm install falsy-finder -S
 The basic syntax is:
 
 ```js
-const finder = require("falsy-finder")();
+const createFinder = require("falsy-finder");
+
+const finder = createFinder();
 
 const someJsonWithNullValues = {
   "data": {
@@ -49,6 +53,8 @@ const someJsonWithNullValues = {
 }
 const result = finder.getFalsyValues(someJsonWithNullValues);
 
+Result:
+
 [{
         key: 'firstName',
         value: ''
@@ -66,6 +72,18 @@ const result = finder.getFalsyValues(someJsonWithNullValues);
         value: null
     }
 ]
+```
+
+Ths syntax using options:
+
+```js
+
+const createFinder = require("falsy-finder");
+
+const options = {"falsyValues": ["my", "custom", null , "and", undefined]};
+
+const finder = createFinder(options);
+
 ```
 
 ### Options
