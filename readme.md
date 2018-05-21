@@ -1,4 +1,4 @@
-# Falsy Finder (Work in progress)
+# Falsy Finder
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/montumodi/falsy-finder.svg)](https://greenkeeper.io/)
 [![Coverage Status](https://coveralls.io/repos/github/montumodi/falsy-finder/badge.svg?branch=master)](https://coveralls.io/github/montumodi/falsy-finder?branch=master)
@@ -14,8 +14,7 @@ A simple utility to find out falsy values from an object or arrays. It returns a
 "",
 null,
 undefined,
-NaN,
-Infinity
+NaN
 ```
 
 This behavior cane be customized by passing options while creating finder. See [options](#options)
