@@ -35,54 +35,55 @@ const createFinder = require("falsy-finder");
 const finder = createFinder();
 
 const someJsonWithNullValues = {
-  "data": {
-    "firstName": "",
-    "lastName": "Ashish",
-    "address": {
-      "city": null,
-      "street": "London"
-    },
-    "tags": [
-      "Hi",
-      "hello",
-      "",
-      undefined
+  firstName: "firstName",
+  lastName: "lastName",
+  address: {
+    City: "",
+    Street: "London"
+  },
+  tags: [
+    "Hi",
+    "hello",
+    "",
+    null,
+    [
+      {
+        nested: null,
+        none: "vallue"
+      }
     ]
-  }
-}
+  ]
+};
 const result = finder.getFalsyValues(someJsonWithNullValues);
 
-Result:
-
-[{
-        key: 'firstName',
-        value: ''
-    },
-    {
-        key: 'city',
-        value: null
-    },
-    {
-        key: 'tags',
-        value: ''
-    },
-    {
-        key: 'tags',
-        value: null
-    }
-]
+Result: [
+  {
+    key: "address.City",
+    value: ""
+  },
+  {
+    key: "tags.[2]",
+    value: ""
+  },
+  {
+    key: "tags.[3]",
+    value: null
+  },
+  {
+    key: "tags.[4].[0].nested",
+    value: null
+  }
+];
 ```
 
 Ths syntax using options:
 
 ```js
-
 const createFinder = require("falsy-finder");
-
-const options = {"falsyValues": ["my", "custom", null , "and", undefined]};
+l;
+const options = { falsyValues: ["my", "custom", null, "and", undefined] };
 
 const finder = createFinder(options);
-
 ```
 
 ### Options

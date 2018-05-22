@@ -3,16 +3,27 @@
     {
       "data": {
         "firstName": "",
-        "lastName": null,
-        "company": []
+        "lastName": "modi",
+        "company": [{
+          "ashi": "modi"
+        }]
+      }
+    },
+    {
+      "data": {
+        "firstName": "loreum",
+        "lastName": "",
+        "company": [{
+          "ashi": null
+        }]
       }
     }
   ],
   "object": {
-    "firstName": "",
+    "firstName": "Ashish",
     "lastName": "Ashish",
     "address": {
-      "City": null,
+      "City": "",
       "Street": "London"
     },
     "tags": [
@@ -22,7 +33,7 @@
       null,
       [
         {
-          "nested": null,
+          "nested": null ,
           "none": "vallue"
         }
       ]

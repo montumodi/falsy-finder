@@ -5,34 +5,34 @@ const {expect, fail} = require("code");
 
 const expectedResultForArray = [
   {
-    "key": "firstName",
+    "key": "[0].data.firstName",
     "value": ""
   },
   {
-    "key": "lastName",
+    "key": "[1].data.lastName",
+    "value": ""
+  },
+  {
+    "key": "[1].data.company.[0].ashi",
     "value": null
   }
 ];
 
 const expectedResultForObject = [
   {
-    "key": "firstName",
+    "key": "address.City",
     "value": ""
   },
   {
-    "key": "City",
-    "value": null
-  },
-  {
-    "key": "tags",
+    "key": "tags.[2]",
     "value": ""
   },
   {
-    "key": "tags",
+    "key": "tags.[3]",
     "value": null
   },
   {
-    "key": "nested",
+    "key": "tags.[4].[0].nested",
     "value": null
   }
 ];
@@ -84,14 +84,14 @@ experiment("Falsy finder with custom options", () => {
     experiment("When object (no array) is provided as input", () => {
       it("should return array of keys successfully", done => {
         const result = getFalsyValues(objectInput);
-        expect(result).to.equal([{"key": "value", "value": "custom"}]);
+        expect(result).to.equal([{"key": "data.value", "value": "custom"}]);
         done();
       });
     });
     experiment("When array is provided as input", () => {
       it("should return array of keys successfully", done => {
         const result = getFalsyValues(arrayInput);
-        expect(result).to.equal([{"key": "data", "value": "options"}]);
+        expect(result).to.equal([{"key": "[0].data", "value": "options"}]);
         done();
       });
     });
