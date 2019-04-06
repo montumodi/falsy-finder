@@ -17,7 +17,7 @@ undefined,
 NaN
 ```
 
-This behavior cane be customized by passing options while creating finder. See [options](#options)
+This behavior can be customized by passing options while creating finder. See [options](#options)
 
 ## How to install
 
