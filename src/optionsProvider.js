@@ -1,4 +1,4 @@
-const Joi = require("joi");
+const Joi = require("@hapi/joi");
 
 const finderOptionsSchema = Joi.object({
   "falsyValues": Joi.array().optional().default(["", null, undefined, NaN])

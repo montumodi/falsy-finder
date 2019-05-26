@@ -1,6 +1,6 @@
 const getOptions = require("../src/optionsProvider");
-const {experiment, it} = (exports.lab = require("lab").script());
-const {expect, fail} = require("code");
+const {experiment, it} = (exports.lab = require("@hapi/lab").script());
+const {expect, fail} = require("@hapi/code");
 
 
 experiment("Falsy finder schema validator", () => {

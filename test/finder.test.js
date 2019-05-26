@@ -1,7 +1,7 @@
 const finder = require("../src/index");
 const testData = require("./testData.json");
-const {experiment, it} = (exports.lab = require("lab").script());
-const {expect, fail} = require("code");
+const {experiment, it} = (exports.lab = require("@hapi/lab").script());
+const {expect, fail} = require("@hapi/code");
 
 const expectedResultForArray = [
   {

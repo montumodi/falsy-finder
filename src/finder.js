@@ -6,7 +6,6 @@ function getFinder(options) {
 
   const validatedOptions = getOptions(options);
 
-
   function prepareFalsyValues(obj, path = [], result = []) {
     let value;
     let fieldPath;
