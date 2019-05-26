@@ -6,7 +6,7 @@
   "scripts": {
     "cover": "istanbul cover ./node_modules/lab/bin/lab ./test --leaks",
     "coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "test": "./node_modules/lab/bin/lab ./test/ -v -S --assert code",
+    "test": "./node_modules/lab/bin/lab ./test/ -v -S --assert @hapi/code",
     "lint": "./node_modules/.bin/eslint ./src --fix",
     "travis": "npm run test",
     "premajor": "npm run test",
