@@ -5,7 +5,7 @@ const finderOptionsSchema = Joi.object({
 });
 
 function getOptions(options = {}) {
-  const result = Joi.validate(options, finderOptionsSchema);
+  const result = finderOptionsSchema.validate(options);
 
   if (result.error) {
     throw new Error(result.error);
