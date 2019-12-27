@@ -80,7 +80,6 @@ Ths syntax using options:
 
 ```js
 const createFinder = require("falsy-finder");
-l;
 const options = { falsyValues: ["my", "custom", null, "and", undefined] };
 
 const finder = createFinder(options);
