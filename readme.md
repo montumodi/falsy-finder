@@ -1,6 +1,6 @@
 # Falsy Finder
 
-
+[![Known Vulnerabilities](https://snyk.io/test/github/montumodi/falsy-finder/badge.svg)](https://snyk.io/test/github/montumodi/falsy-finder)
 [![Coverage Status](https://coveralls.io/repos/github/montumodi/falsy-finder/badge.svg?branch=master)](https://coveralls.io/github/montumodi/falsy-finder?branch=master)
 [![Build Status](https://travis-ci.org/montumodi/falsy-finder.svg?branch=master)](https://travis-ci.org/montumodi/falsy-finder)
 [![Deps](https://david-dm.org/montumodi/falsy-finder.svg)](https://david-dm.org/montumodi/falsy-finder#info=dependencies)
