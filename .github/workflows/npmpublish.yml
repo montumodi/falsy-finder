@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: git config --global user.email "montumodi@gmail.com"
+      - run: git config --global user.name "Ashish Modi"
       - run: npm version minor
       - run: npm publish
         env:
