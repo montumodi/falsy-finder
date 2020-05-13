@@ -30,7 +30,7 @@ jobs:
         env:	
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: npm version minor
-      - run: git push
+      - run: git push origin HEAD:master
       #- run: npm publish
        # env:
         #  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
