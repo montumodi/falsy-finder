@@ -30,7 +30,9 @@ jobs:
       #- run: npm publish
        # env:
         #  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - uses: elstudio/actions-js-build/commit@v3
+      - uses: peter-evans/create-pull-request@v1
         with:
-          commitMessage: pushed package.json
+          token: ${{secrets.GITHUB_TOKEN}}
+          commit-message: Bump version
+          title: Bump version
 
