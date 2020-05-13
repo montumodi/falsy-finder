@@ -30,3 +30,6 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - run: git add .
+      - run: git commit -m "Bumped version"
+      - run: git push origin -u master
