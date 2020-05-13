@@ -27,7 +27,7 @@ jobs:
       - run: git config --global user.email "montumodi@gmail.com"
       - run: git config --global user.name "Ashish Modi"
       - run: npm version minor
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - run: git push
+      #- run: npm publish
+       # env:
+        #  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - run: git status
