@@ -30,4 +30,7 @@ jobs:
       #- run: npm publish
        # env:
         #  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - run: git status
+      - run: git remote set-url --push origin https://montumodi:$GITHUB_TOKEN@github.com/falsy-finder
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
