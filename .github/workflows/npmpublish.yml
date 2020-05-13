@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: npm install  
       - run: npm test
 
   publish-npm:
@@ -23,8 +24,12 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm test
+      - run: git config --global user.email "montumodi@gmail.com"
+      - run: git config --global user.name "Ashish Modi"
       - run: npm version minor
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - run: git add .
+      - run: git commit -m "Bumped version"
+      - run: git push origin -u master
