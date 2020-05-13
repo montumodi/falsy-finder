@@ -26,13 +26,12 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: git config --global user.email "montumodi@gmail.com"
       - run: git config --global user.name "Ashish Modi"
+      - run: git remote set-url --push origin https://montumodi:$GITHUB_TOKEN@github.com/falsy-finder
+        env:	
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: npm version minor
+      - run: git push
       #- run: npm publish
        # env:
         #  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - uses: peter-evans/create-pull-request@v1
-        with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          commit-message: Bump version
-          title: Bump version
 
