@@ -4,18 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm install  
-      - run: npm test
-
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -28,6 +17,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm update
       - run: npm install
+      - run: npm test
       - run: git config --global user.email "montumodi@gmail.com"
       - run: git config --global user.name "Ashish Modi"
       - run: git commit -m "Add changes" -a
@@ -38,7 +28,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-      - run: npm run minor
+      - run: npm version minor && git push origin HEAD:master --follow-tags
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}  
