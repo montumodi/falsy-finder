@@ -1,8 +1,7 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created,updated]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,6 +11,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: npm update
       - run: npm install  
       - run: npm test
 
@@ -29,9 +29,7 @@ jobs:
       - run: git remote set-url --push origin https://montumodi:$GITHUB_TOKEN@github.com/${{github.repository}}
         env:	
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: npm version minor
-      - run: git push origin HEAD:master
-      - run: npm publish
+      - run: npm run minor
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
