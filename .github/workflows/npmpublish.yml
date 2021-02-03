@@ -20,6 +20,7 @@ jobs:
       - run: npm test
       - run: git config --global user.email "montumodi@gmail.com"
       - run: git config --global user.name "Ashish Modi"
+      - run: npm version minor
       - run: git commit -m "Add changes" -a
         env:	
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -28,8 +29,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-      - run: npm version minor && git push origin HEAD:master --follow-tags
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}  
 
