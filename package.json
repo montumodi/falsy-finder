@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/montumodi/falsy-finder#readme",
   "devDependencies": {
-    "@hapi/code": "^7.0.1",
+    "@hapi/code": "^8.0.1",
     "coveralls": "^3.0.9",
     "grunt": "^1.0.4",
     "grunt-eslint": "^22.0.0",
@@ -50,6 +50,6 @@
     "time-grunt": "^2.0.0"
   },
   "dependencies": {
-    "@hapi/joi": "^17.1.1"
+    "@hapi/joi": "^16.0.0"
   }
 }
